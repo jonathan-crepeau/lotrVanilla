@@ -293,7 +293,22 @@ const thereAndBackAgain = () => {
 // This code is loading all of the event listeners for the buttons in your application.
 // =====================================
 
+// NOTE - VanillaJS seems to not take numeric element IDs. While '#1' would work as an element ID when using jQuery, in VanillaJS it has to become "one" to work.
+
 const btn1 = document.querySelector('#one')
+const btn2 = document.querySelector('#two');
+const btn3 = document.querySelector('#three')
+const btn4 = document.querySelector('#four')
+const btn5 = document.querySelector('#five')
+const btn6 = document.querySelector('#six')
+const btn7 = document.querySelector('#seven')
+const btn8 = document.querySelector('#eight')
+const btn9 = document.querySelector('#nine')
+const btn10 = document.querySelector('#ten')
+const btn11 = document.querySelector('#eleven')
+const btn12 = document.querySelector('#twelve')
+const btn13 = document.querySelector('#thirteen')
+const btn14 = document.querySelector('#fourteen')
 
 btn1.addEventListener('click', () => {
   makeMiddleEarth();
