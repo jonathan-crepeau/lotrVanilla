@@ -1,4 +1,4 @@
-console.log('Fear is the mind killer.');
+// console.log('Fear is the mind killer.');
 
 // ==============================
 //       ANCHOR - Dramatis Personae
@@ -47,7 +47,7 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
+  console.log("Chapter 1 - Make Middle Earth");
 
   // 1. create a section tag with an id of middle-earth
 
@@ -75,7 +75,7 @@ const makeMiddleEarth = () => {
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+  console.log('Chapter 2 - Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -96,6 +96,7 @@ const makeHobbits = () => {
 // SECTION - Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
+  console.log('Chapter 3 - Keep It Secret, Keep It Safe');
 
   // 1. create an empty div with an id of 'the-ring'
 
@@ -116,6 +117,7 @@ const keepItSecretKeepItSafe = () => {
 // SECTION - Chapter 4
 // ============
 const makeBaddies = () => {
+  console.log('Chapter 4 - Make Baddies');
 
   // 1. display an unordered list of baddies in Mordor
 
@@ -133,6 +135,7 @@ const makeBaddies = () => {
 // SECTION - Chapter 5
 // ============
 const makeBuddies = () => {
+  console.log('Chapter 5 - Make Buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
@@ -151,6 +154,7 @@ const makeBuddies = () => {
 // SECTION - Chapter 6
 // ============
 const leaveTheShire = () => {
+  console.log('Chapter 6 - Leave The Shire');
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
@@ -167,6 +171,7 @@ const leaveTheShire = () => {
 // SECTION - Chapter 7
 // ============
 const beautifulStranger = () => {
+  console.log('Chapter 7 - Beautiful Stranger');
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
@@ -183,6 +188,7 @@ const beautifulStranger = () => {
 // SECTION - Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+  console.log('Chapter 8 - Forge The Fellowship');
 
   // 1. create a new div with an id 'the-fellowship'
 
@@ -203,6 +209,7 @@ const forgeTheFellowShip = () => {
 // SECTION - Chapter 9
 // ============
 const theBalrog = () => {
+  console.log('Chapter 9 - The Balrog');
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
@@ -221,6 +228,7 @@ const theBalrog = () => {
 // SECTION - Chapter 10
 // ============
 const hornOfGondor = () => {
+  console.log('Chapter 10 - The Horn of Gondor');
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
@@ -239,6 +247,7 @@ const hornOfGondor = () => {
 // SECTION - Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
+  console.log(`Chapter 11 - It's Dangerous To Go Alone`);
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
@@ -255,6 +264,7 @@ const itsDangerousToGoAlone = () => {
 // SECTION - Chapter 12
 // ============
 const weWantsIt = () => {
+  console.log('Chapter 12 - We Wants It');
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
@@ -273,6 +283,7 @@ const weWantsIt = () => {
 // SECTION - Chapter 13
 // ============
 const thereAndBackAgain = () => {
+  console.log('Chapter 13 - There And Back Again');
 
   // 1. remove Gollum and the Ring from the DOM
 
@@ -312,7 +323,58 @@ const btn14 = document.querySelector('#fourteen')
 
 btn1.addEventListener('click', () => {
   makeMiddleEarth();
-})
+});
+btn2.addEventListener('click', () => {
+  makeHobbits();
+});
+btn3.addEventListener('click', () => {
+  keepItSecretKeepItSafe();
+});
+btn4.addEventListener('click', () => {
+  makeBaddies();
+});
+btn5.addEventListener('click', () => {
+  makeBuddies();
+});
+btn6.addEventListener('click', () => {
+  leaveTheShire();
+});
+btn7.addEventListener('click', () => {
+  beautifulStranger();
+});
+btn8.addEventListener('click', () => {
+  forgeTheFellowShip();
+});
+btn9.addEventListener('click', () => {
+  theBalrog();
+});
+btn10.addEventListener('click', () => {
+  hornOfGondor();
+});
+btn11.addEventListener('click', () => {
+  itsDangerousToGoAlone();
+});
+btn12.addEventListener('click', () => {
+  weWantsIt();
+});
+btn13.addEventListener('click', () => {
+  thereAndBackAgain();
+});
+btn14.addEventListener('click', () => {
+  makeMiddleEarth();
+  makeHobbits();
+  keepItSecretKeepItSafe();
+  makeBaddies();
+  makeBuddies();
+  leaveTheShire();
+  beautifulStranger();
+  forgeTheFellowShip();
+  theBalrog();
+  hornOfGondor();
+  itsDangerousToGoAlone();
+  weWantsIt();
+  thereAndBackAgain();
+});
 
 // $(() => {
 
