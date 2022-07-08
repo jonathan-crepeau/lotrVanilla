@@ -170,6 +170,7 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
   const buddiesList = document.createElement('aside');
+  buddiesList.innerHTML = '<ul></ul>';
   document.querySelector('body').appendChild(buddiesList);
 
   // 2. display an unordered list of buddies in the aside
@@ -177,7 +178,7 @@ const makeBuddies = () => {
   for (let a = 0; a < buddies.length; a++) {
     let listItem = document.createElement('li');
     listItem.innerHTML = buddies[a];
-    document.querySelector('aside').appendChild(listItem).setAttribute('class', 'buddy');
+    document.querySelector('aside ul').appendChild(listItem).setAttribute('class', 'buddy');
   }
 
   // 3. give each of the buddies a class of "buddy"
@@ -232,7 +233,17 @@ const forgeTheFellowShip = () => {
   console.log('Chapter 8 - Forge The Fellowship');
 
   // 1. create a new div with an id 'the-fellowship'
+  let theFellowship = document.createElement('div');
+  theFellowship.innerHTML = '<h1>The Fellowship</h1>';
 
+  document.querySelector('#middle-earth').appendChild(theFellowship).setAttribute('id', 'the-fellowship');
+  theFellowship.appendChild(document.querySelector('#Rivendell ul'));
+  theFellowship.appendChild(document.querySelector('aside ul'));
+  // let fewllowshipBuddies = document.querySelectorAll('aside li');
+  // for (let a = 0; a < fewllowshipBuddies.length; a++){
+  //   theFellowship.appendChild(fewllowshipBuddies[a]);
+  // };
+  
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
