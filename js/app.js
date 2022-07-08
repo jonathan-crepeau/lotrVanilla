@@ -197,6 +197,7 @@ const leaveTheShire = () => {
   console.log('Chapter 6 - Leave The Shire');
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+  document.querySelector('#Rivendell').appendChild(document.querySelector('#The-Shire ul'));
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
