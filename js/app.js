@@ -348,8 +348,16 @@ const itsDangerousToGoAlone = () => {
   document
     .querySelector("#Mordor")
     .appendChild(document.querySelector(".hobbit:nth-child(1)"));
+  
+    // 2. Add a div with and id of 'mount-doom' to Mordor
+  let mountain = document.createElement('div');
+  mountain.setAttribute('id', 'mount-doom');
+  document.querySelector('#Mordor')
+    .prepend(mountain);
 
 };
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -363,10 +371,14 @@ const weWantsIt = () => {
   console.log('Chapter 12 - We Wants It');
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  let gollum = document.createElement('div');
+  document.querySelector('#Mordor').appendChild(gollum).setAttribute('id', 'gollum');
 
   // 2. Move the ring from Frodo and give it to Gollum
+  gollum.appendChild( document.querySelector('#the-ring'));
 
   // 3. Move Gollum into Mount Doom
+
 
 };
 
