@@ -32,7 +32,10 @@ const lands = [
   "Mordor"
 ];
 
-
+let theShire;
+let mountain;
+let gollumn;
+let theRing;
 
 // ====================================
 //           ANCHOR - Chapters
@@ -111,7 +114,7 @@ const makeHobbits = () => {
     newListItem.innerHTML = hobbits[a];
     // NOTE - append() will not let you chain .setAttribute(), but appendChild() will.
     document
-      .querySelector('#the-shire ul')
+      .querySelector('#The-Shire ul')
       .appendChild(newListItem)
       .setAttribute('class', 'hobbit');
   }
@@ -132,7 +135,7 @@ const keepItSecretKeepItSafe = () => {
   console.log('Chapter 3 - Keep It Secret, Keep It Safe');
 
   // 1. create an empty div with an id of 'the-ring'
-  let theRing = document.createElement('div');
+  theRing = document.createElement('div');
   document
     .querySelector('.hobbit')
     .appendChild(theRing)
@@ -319,10 +322,10 @@ const hornOfGondor = () => {
   console.log('Chapter 10 - The Horn of Gondor');
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-  console.log('The horn of Gondor has been blown!');
+  alert('The horn of Gondor has been blown!');
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-  let deadGuy = document
+  document
     .querySelector('.buddy:nth-child(5)')
     .style.textDecoration = 'line-through';
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
@@ -350,14 +353,12 @@ const itsDangerousToGoAlone = () => {
     .appendChild(document.querySelector(".hobbit:nth-child(1)"));
   
     // 2. Add a div with and id of 'mount-doom' to Mordor
-  let mountain = document.createElement('div');
+  mountain = document.createElement('div')
   mountain.setAttribute('id', 'mount-doom');
   document.querySelector('#Mordor')
     .prepend(mountain);
 
 };
-
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -371,13 +372,14 @@ const weWantsIt = () => {
   console.log('Chapter 12 - We Wants It');
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-  let gollum = document.createElement('div');
+  gollum = document.createElement('div');
   document.querySelector('#Mordor').appendChild(gollum).setAttribute('id', 'gollum');
 
   // 2. Move the ring from Frodo and give it to Gollum
   gollum.appendChild( document.querySelector('#the-ring'));
 
   // 3. Move Gollum into Mount Doom
+  mountain.appendChild(gollum);
 
 
 };
@@ -394,10 +396,19 @@ const thereAndBackAgain = () => {
   console.log('Chapter 13 - There And Back Again');
 
   // 1. remove Gollum and the Ring from the DOM
-
+    gollum.remove();
+    theRing.remove();
   // 2. remove all the baddies from the DOM
+    let baddiesGroup = document.querySelectorAll('.baddy');
+    for (let a = 0; a < baddiesGroup.length; a++){
+      baddiesGroup[a].remove();
+    }
 
   // 3. Move all the hobbits back to the shire
+  let hobbitGroup = document.querySelectorAll('.hobbit');
+  for (let a = 0; a < hobbitGroup.length; a++) {
+    document.querySelector('#The-Shire').appendChild(hobbitGroup[a]);
+  }
 
 };
 
