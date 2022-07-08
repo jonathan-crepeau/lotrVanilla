@@ -164,7 +164,10 @@ aside ul {
   width: 20%;
 }
 
-
+.the-white {
+  background: white;
+  border: dashed grey 2px;
+}
 
 /*===========================================================*/
 /* Responsive Layout Keeps Locales Correctly Oriented on Map */

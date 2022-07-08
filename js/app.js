@@ -264,9 +264,12 @@ const theBalrog = () => {
   console.log('Chapter 9 - The Balrog');
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+  // NOTE - My guess is that it takes less memory / "effort" for the script to only have to do one 'querySelector' search vs. indivdually doing a 'querySelector' search for two lines of code in a row (below).
+  let whiteWizard = document.querySelector('.buddy');
+  whiteWizard.innerText = 'Gandalf the White';
 
   // 2. add a class "the-white" to this element
-
+  whiteWizard.setAttribute('class', 'the-white');
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
