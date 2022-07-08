@@ -3,7 +3,6 @@
 // ==============================
 //       ANCHOR - Dramatis Personae
 // ==============================
-const log = console.log();
 
 const hobbits = [
   "Frodo Baggins",
@@ -215,6 +214,7 @@ const beautifulStranger = () => {
   console.log('Chapter 7 - Beautiful Stranger');
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
+  document.querySelector('aside li:nth-child(4)').innerText = 'Aragorn';
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
