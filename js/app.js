@@ -286,11 +286,12 @@ const hornOfGondor = () => {
   console.log('Chapter 10 - The Horn of Gondor');
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+  console.log('The horn of Gondor has been blown!');
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  let deadGuy = document.querySelector('.buddy:nth-child(5)').style.textDecoration = 'line-through';
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  document.querySelector('#Mordor li:nth-child(3').remove();
 };
 
 // COMMIT YOUR WORK
