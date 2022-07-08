@@ -3,6 +3,7 @@
 // ==============================
 //       ANCHOR - Dramatis Personae
 // ==============================
+const log = console.log();
 
 const hobbits = [
   "Frodo Baggins",
@@ -58,7 +59,6 @@ const makeMiddleEarth = () => {
 
     // NOTE - Below is an example of working to chain methods together ... if in a verbose way. Remember, VanillaJS is syntax-heavy, hence so many libraries like jQuery to 
   document.querySelector('body').appendChild(newDiv).setAttribute('id', 'middle-earth');
-  console.log(newDiv);
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -67,7 +67,6 @@ const makeMiddleEarth = () => {
     newArticle.innerHTML = `<h1>${lands[a]}</h1>`;
     // document.newArticle.innerHTML('<h1></h1>');
     document.querySelector('#middle-earth').appendChild(newArticle).setAttribute('id', lands[a]);
-    // document.getElementById('middle-earth').append()
   };
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
@@ -93,10 +92,18 @@ const makeHobbits = () => {
   console.log('Chapter 2 - Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
+  let hobbitList = document.createElement('ul');
+  document.querySelector('#The-Shire').append(hobbitList);
 
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
+
+  for (let a = 0; a < hobbits.length; a++) {
+    let newListItem = document.createElement('li');
+    newListItem.innerHTML = hobbits[a];
+    document.querySelector('#the-shire ul').appendChild(newListItem).setAttribute('class', 'hobbit');
+  }
 
   // hint: get 'The-Shire' by using its id
 
