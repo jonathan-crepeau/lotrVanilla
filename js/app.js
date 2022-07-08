@@ -170,8 +170,16 @@ const makeBuddies = () => {
   console.log('Chapter 5 - Make Buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
+  const buddiesList = document.createElement('aside');
+  document.querySelector('body').appendChild(buddiesList);
 
   // 2. display an unordered list of buddies in the aside
+
+  for (let a = 0; a < buddies.length; a++) {
+    let listItem = document.createElement('li');
+    listItem.innerHTML = buddies[a];
+    document.querySelector('aside').appendChild(listItem).setAttribute('class', 'buddy');
+  }
 
   // 3. give each of the buddies a class of "buddy"
 
