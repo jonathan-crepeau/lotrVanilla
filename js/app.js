@@ -57,7 +57,10 @@ const makeMiddleEarth = () => {
   // 2. append the section to the body of the DOM.
 
     // NOTE - Below is an example of working to chain methods together ... if in a verbose way. Remember, VanillaJS is syntax-heavy, hence so many libraries like jQuery to 
-  document.querySelector('body').appendChild(newDiv).setAttribute('id', 'middle-earth');
+  document
+    .querySelector('body')
+    .appendChild(newDiv)
+    .setAttribute('id', 'middle-earth');
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -65,7 +68,10 @@ const makeMiddleEarth = () => {
     let newArticle = document.createElement('article');
     newArticle.innerHTML = `<h1>${lands[a]}</h1>`;
     // document.newArticle.innerHTML('<h1></h1>');
-    document.querySelector('#middle-earth').appendChild(newArticle).setAttribute('id', lands[a]);
+    document
+      .querySelector('#middle-earth')
+      .appendChild(newArticle)
+      .setAttribute('id', lands[a]);
   };
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
@@ -92,7 +98,9 @@ const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
   let hobbitList = document.createElement('ul');
-  document.querySelector('#The-Shire').append(hobbitList);
+  document
+    .querySelector('#The-Shire')
+    .append(hobbitList);
 
   // 2. give each hobbit a class of "hobbit"
 
@@ -102,7 +110,10 @@ const makeHobbits = () => {
     let newListItem = document.createElement('li');
     newListItem.innerHTML = hobbits[a];
     // NOTE - append() will not let you chain .setAttribute(), but appendChild() will.
-    document.querySelector('#the-shire ul').appendChild(newListItem).setAttribute('class', 'hobbit');
+    document
+      .querySelector('#the-shire ul')
+      .appendChild(newListItem)
+      .setAttribute('class', 'hobbit');
   }
 
   // hint: get 'The-Shire' by using its id
@@ -122,7 +133,10 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
   let theRing = document.createElement('div');
-  document.querySelector('.hobbit').appendChild(theRing).setAttribute('id', 'the-ring');
+  document
+    .querySelector('.hobbit')
+    .appendChild(theRing)
+    .setAttribute('id', 'the-ring');
 
   // 2. add the ring as a child of Frodo
 
@@ -145,12 +159,17 @@ const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
   let baddiesList = document.createElement('ul');
-  document.querySelector('#Mordor').appendChild(baddiesList);
+  document
+    .querySelector('#Mordor')
+    .appendChild(baddiesList);
   
   for (let a = 0; a < baddies.length; a++) {
     let listItem = document.createElement('li');
     listItem.innerHTML = baddies[a];
-    document.querySelector('#Mordor ul').appendChild(listItem).setAttribute('class', 'baddy');
+    document
+      .querySelector('#Mordor ul')
+      .appendChild(listItem)
+      .setAttribute('class', 'baddy');
   }
   // 2. give each of the baddies a class of "baddy"
 
@@ -171,14 +190,19 @@ const makeBuddies = () => {
   // 1. create an aside tag and append it to middle-earth below mordor
   const buddiesList = document.createElement('aside');
   buddiesList.innerHTML = '<ul></ul>';
-  document.querySelector('body').appendChild(buddiesList);
+  document
+    .querySelector('body')
+    .appendChild(buddiesList);
 
   // 2. display an unordered list of buddies in the aside
 
   for (let a = 0; a < buddies.length; a++) {
     let listItem = document.createElement('li');
     listItem.innerHTML = buddies[a];
-    document.querySelector('aside ul').appendChild(listItem).setAttribute('class', 'buddy');
+    document
+      .querySelector('aside ul')
+      .appendChild(listItem)
+      .setAttribute('class', 'buddy');
   }
 
   // 3. give each of the buddies a class of "buddy"
@@ -197,7 +221,9 @@ const leaveTheShire = () => {
   console.log('Chapter 6 - Leave The Shire');
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-  document.querySelector('#Rivendell').appendChild(document.querySelector('#The-Shire ul'));
+  document
+    .querySelector('#Rivendell')
+      .appendChild(document.querySelector('#The-Shire ul'));
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -215,7 +241,9 @@ const beautifulStranger = () => {
   console.log('Chapter 7 - Beautiful Stranger');
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-  document.querySelector('aside li:nth-child(4)').innerText = 'Aragorn';
+  document
+    .querySelector('aside li:nth-child(4)')
+    .innerText = 'Aragorn';
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
@@ -236,9 +264,14 @@ const forgeTheFellowShip = () => {
   let theFellowship = document.createElement('div');
   theFellowship.innerHTML = '<h1>The Fellowship</h1>';
 
-  document.querySelector('#middle-earth').appendChild(theFellowship).setAttribute('id', 'the-fellowship');
-  theFellowship.appendChild(document.querySelector('#Rivendell ul'));
-  theFellowship.appendChild(document.querySelector('aside ul'));
+  document
+    .querySelector('#middle-earth')
+    .appendChild(theFellowship)
+    .setAttribute('id', 'the-fellowship');
+  theFellowship
+    .appendChild(document.querySelector('#Rivendell ul'));
+  theFellowship
+    .appendChild(document.querySelector('aside ul'));
   // let fewllowshipBuddies = document.querySelectorAll('aside li');
   // for (let a = 0; a < fewllowshipBuddies.length; a++){
   //   theFellowship.appendChild(fewllowshipBuddies[a]);
@@ -289,9 +322,12 @@ const hornOfGondor = () => {
   console.log('The horn of Gondor has been blown!');
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-  let deadGuy = document.querySelector('.buddy:nth-child(5)').style.textDecoration = 'line-through';
+  let deadGuy = document
+    .querySelector('.buddy:nth-child(5)')
+    .style.textDecoration = 'line-through';
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-  document.querySelector('#Mordor li:nth-child(3').remove();
+  document
+    .querySelector('#Mordor li:nth-child(3').remove();
 };
 
 // COMMIT YOUR WORK
@@ -306,8 +342,12 @@ const itsDangerousToGoAlone = () => {
   console.log(`Chapter 11 - It's Dangerous To Go Alone`);
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
-  // 2. add a div with an id of 'mount-doom' to Mordor
+  document
+    .querySelector('#Mordor')
+    .appendChild(document.querySelector('.hobbit'));
+  document
+    .querySelector("#Mordor")
+    .appendChild(document.querySelector(".hobbit:nth-child(1)"));
 
 };
 
