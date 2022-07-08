@@ -102,6 +102,7 @@ const makeHobbits = () => {
   for (let a = 0; a < hobbits.length; a++) {
     let newListItem = document.createElement('li');
     newListItem.innerHTML = hobbits[a];
+    // NOTE - append() will not let you chain .setAttribute(), but appendChild() will.
     document.querySelector('#the-shire ul').appendChild(newListItem).setAttribute('class', 'hobbit');
   }
 
@@ -121,6 +122,8 @@ const keepItSecretKeepItSafe = () => {
   console.log('Chapter 3 - Keep It Secret, Keep It Safe');
 
   // 1. create an empty div with an id of 'the-ring'
+  let theRing = document.createElement('div');
+  document.querySelector('.hobbit').appendChild(theRing).setAttribute('id', 'the-ring');
 
   // 2. add the ring as a child of Frodo
 
