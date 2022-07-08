@@ -51,9 +51,24 @@ const makeMiddleEarth = () => {
 
   // 1. create a section tag with an id of middle-earth
 
+  // NOTE - Appears that you can't chain any other vanilla JS methods to document.createElement() unless they also return an element. Adding any like, appendChild() or setAttribute() throw an error eventually because they do not return an element.
+  const newDiv = document.createElement('div')
+
   // 2. append the section to the body of the DOM.
 
+    // NOTE - Below is an example of working to chain methods together ... if in a verbose way. Remember, VanillaJS is syntax-heavy, hence so many libraries like jQuery to 
+  document.querySelector('body').appendChild(newDiv).setAttribute('id', 'middle-earth');
+  console.log(newDiv);
+
   // 3. use a for loop to iterate over the lands array that does the following:
+
+  for (let a = 0; a < lands.length; a++) {
+    let newArticle = document.createElement('article');
+    newArticle.innerHTML = `<h1>${lands[a]}</h1>`;
+    // document.newArticle.innerHTML('<h1></h1>');
+    document.querySelector('#middle-earth').appendChild(newArticle).setAttribute('id', lands[a]);
+    // document.getElementById('middle-earth').append()
+  };
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
